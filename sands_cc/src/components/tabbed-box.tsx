@@ -1,41 +1,52 @@
+import { TabContext, TabPanel } from '@mui/lab';
 import { Tabs, Tab, Paper } from '@mui/material';
 import { useState } from 'react';
+import { SelectorBoxTab } from '../features/selector-box';
 
 export interface TabbedBoxProps {
-  tabTitles: string[];
+  tabs: SelectorBoxTab[];
 }
 
 export function TabbedBox(props: TabbedBoxProps) {
-  const { tabTitles } = props;
+  const { tabs } = props;
   const [currentTab, setCurrentTab] = useState(0);
   const tabScale = 1 / 7;
-  const tabColors = [
-    '#FD8A8A',
-    '#9EA1D4',
-    '#CEEDC7',
-    '#86C8BC',
-    '#FFD4B2',
-    '#F1F7B5',
-    '#FFF6BD'
-  ];
   return (
     <Paper>
-      <Tabs
-        value={currentTab}
-        onChange={handleChange}
-        indicatorColor={'primary'}
-        sx={{ border: 1 }}
-      >
-        {tabTitles.map((title, index) => {
+      <TabContext value={tabs[currentTab].title}>
+        <Tabs
+          value={currentTab}
+          onChange={handleChange}
+          indicatorColor={'primary'}
+          sx={{ border: 1 }}
+        >
+          {tabs.map((tab, index) => {
+            return (
+              <Tab
+                label={tab.title}
+                key={index}
+                wrapped={true}
+                sx={{
+                  backgroundColor: tab.colour,
+                  width: tabScale,
+                  paddingX: '4vw'
+                }}
+              />
+            );
+          })}
+        </Tabs>
+        {tabs.map((tab, index) => {
           return (
-            <Tab
-              label={title}
-              wrapped={true}
-              sx={{ backgroundColor: tabColors[index], width: tabScale }}
-            />
+            <TabPanel
+              key={index}
+              value={tab.title}
+              sx={{ backgroundColor: 'secondary.main', maxHeight: '75vh' }}
+            >
+              {tab.content}
+            </TabPanel>
           );
         })}
-      </Tabs>
+      </TabContext>
     </Paper>
   );
 
