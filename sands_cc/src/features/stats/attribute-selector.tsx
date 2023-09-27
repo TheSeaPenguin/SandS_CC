@@ -23,20 +23,21 @@ export function AttributeSelector(props: AttributeSelectorProps) {
     { id: 3, displayValue: '2' }
   ];
 
-  console.log(attributeValuesSelected);
   return (
     <Stack direction={vertical ? 'column' : 'row'} spacing={spacing}>
-      <SelectBoxWithTitle
-        id="EarthStatBox"
-        title="Earth:"
-        options={attributeValues}
-        optionsAlreadySelected={attributeValuesSelected}
-        optionSelectedSetter={setAttributeValuesSelected}
-        colour="stats.earth"
-        vertical={true}
-        width={width}
-        height={height}
-      />
+      <span>
+        <SelectBoxWithTitle
+          id="EarthStatBox"
+          title="Earth:"
+          options={attributeValues}
+          optionsAlreadySelected={attributeValuesSelected}
+          optionSelectedSetter={setAttributeValuesSelected}
+          colour="stats.earth"
+          vertical={true}
+          width={width}
+          height={height}
+        />
+      </span>
       <SelectBoxWithTitle
         id="WaterStatBox"
         title="Water:"

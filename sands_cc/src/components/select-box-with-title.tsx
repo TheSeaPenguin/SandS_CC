@@ -7,6 +7,7 @@ import {
   Typography
 } from '@mui/material';
 import { useState } from 'react';
+import { useStore } from '../hooks/useStore';
 
 export interface SelectBoxWithTitleProps {
   id: string;
@@ -35,17 +36,37 @@ export function SelectBoxWithTitle(props: SelectBoxWithTitleProps) {
 
   const [selectedValue, setSelectedValue] = useState('-1');
 
+  const updateAttributeState = useStore((state) => state.updateAttribute);
+  const lowerCaseSelectBoxId = id.split('StatBox')[0].toLowerCase();
+
   const handleChange = (event: SelectChangeEvent) => {
     const value = event.target.value;
+    const numValue = Number(value);
+    const prevValue = Number(selectedValue);
+
     setSelectedValue(value);
-    optionSelectedSetter([...optionsAlreadySelected, Number(value)]);
+    updateAttributeState(
+      lowerCaseSelectBoxId,
+      numValue === -1 ? 0 : Number(options.at(numValue + 1)?.displayValue)
+    );
+
+    if (optionsAlreadySelected.includes(prevValue)) {
+      const index = optionsAlreadySelected.indexOf(prevValue);
+      const copyToSplice = [...optionsAlreadySelected];
+      if (numValue !== -1) {
+        copyToSplice.splice(index, 1, numValue);
+      } else {
+        copyToSplice.splice(index, 1);
+      }
+      optionSelectedSetter(copyToSplice);
+    } else if (numValue !== -1) {
+      optionSelectedSetter([...optionsAlreadySelected, numValue]);
+    }
   };
 
   const alteredRemovalArray = optionsAlreadySelected.filter(
     (x) => x !== Number(selectedValue)
   );
-  console.log('selectedValue', selectedValue);
-  console.log('alteredRemovalArray', alteredRemovalArray);
 
   return (
     <Stack

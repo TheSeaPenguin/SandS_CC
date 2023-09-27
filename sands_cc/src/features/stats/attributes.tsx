@@ -1,5 +1,6 @@
 import { Stack } from '@mui/material';
 import { TextBoxWithTitle } from '../../components';
+import { useStore } from '../../hooks/useStore';
 
 export interface AttributesProps {
   vertical: boolean;
@@ -10,12 +11,13 @@ export interface AttributesProps {
 
 export function Attributes(props: AttributesProps) {
   const { vertical, width, height, spacing } = props;
+  const attributeValues = useStore((state) => state.attributes);
   return (
     <Stack direction={vertical ? 'column' : 'row'} spacing={spacing}>
       <TextBoxWithTitle
         id="EarthStatBox"
         title="Earth:"
-        value="0"
+        value={attributeValues.earth}
         colour="stats.earth"
         vertical={true}
         width={width}
@@ -24,7 +26,7 @@ export function Attributes(props: AttributesProps) {
       <TextBoxWithTitle
         id="WaterStatBox"
         title="Water:"
-        value="0"
+        value={attributeValues.water}
         colour="stats.water"
         vertical={true}
         width={width}
@@ -33,7 +35,7 @@ export function Attributes(props: AttributesProps) {
       <TextBoxWithTitle
         id="FireStatBox"
         title="Fire:"
-        value="0"
+        value={attributeValues.fire}
         colour="stats.fire"
         vertical={true}
         width={width}
@@ -42,7 +44,7 @@ export function Attributes(props: AttributesProps) {
       <TextBoxWithTitle
         id="AirStatBox:"
         title="Air:"
-        value="0"
+        value={attributeValues.air}
         colour="stats.air"
         vertical={true}
         width={width}

@@ -4,7 +4,7 @@ export interface TextBoxWithTitleProps {
   id: string;
   colour?: string;
   title: string;
-  value: string;
+  value: string | number;
   vertical?: boolean;
   width?: number | string;
   height?: number | string;
