@@ -5,3 +5,5 @@ export { TabbedBox } from './tabbed-box';
 export { TextBoxWithTitle } from './text-box-with-title';
 export { SelectBoxWithTitle } from './select-box-with-title';
 export { AccordionContainer } from './accordion-container';
+export { InfoTooltip } from './info-tooltip';
+export { InfoBox } from './info-box';

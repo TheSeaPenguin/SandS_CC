@@ -1,4 +1,5 @@
 import { Stack, Typography } from '@mui/material';
+import { InfoTooltip } from './info-tooltip';
 
 export interface TextBoxWithTitleProps {
   id: string;
@@ -8,18 +9,22 @@ export interface TextBoxWithTitleProps {
   vertical?: boolean;
   width?: number | string;
   height?: number | string;
+  borderThickness?: number;
 }
 
 export function TextBoxWithTitle(props: TextBoxWithTitleProps) {
-  const { id, colour, title, value, vertical, width, height } = props;
+  const { id, colour, title, value, vertical, width, height, borderThickness } =
+    props;
   return (
     <Stack
       direction={vertical ? 'column' : 'row'}
       justifyContent={'center'}
       sx={{
         width: width,
-        border: 1,
         borderColor: 'secondary.dark',
+        ...(borderThickness !== undefined
+          ? { border: borderThickness }
+          : { border: 1 }),
         ...(!vertical && {
           padding: '0.3em',
           backgroundColor: [colour]
@@ -40,7 +45,10 @@ export function TextBoxWithTitle(props: TextBoxWithTitleProps) {
       <Typography
         id={id}
         align="center"
-        sx={{ height: height, fontSize: '1rem' }}
+        sx={{
+          height: height,
+          fontSize: '1rem'
+        }}
       >
         {value}
       </Typography>

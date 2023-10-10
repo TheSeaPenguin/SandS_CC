@@ -1,4 +1,6 @@
 import {
+  Button,
+  ButtonGroup,
   MenuItem,
   MenuList,
   Select,
@@ -6,8 +8,11 @@ import {
   Stack,
   Typography
 } from '@mui/material';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useStore } from '../hooks/useStore';
+import { InfoOutlined } from '@mui/icons-material';
+import { InfoTooltip } from './info-tooltip';
+import { TextBoxWithTitle } from './text-box-with-title';
 
 export interface SelectBoxWithTitleProps {
   id: string;
@@ -19,6 +24,9 @@ export interface SelectBoxWithTitleProps {
   vertical?: boolean;
   width?: number | string;
   height?: number | string;
+  information: string;
+  improvementPointSetter: (changeToMake: string) => void;
+  spentImprovementPoints: number;
 }
 
 export function SelectBoxWithTitle(props: SelectBoxWithTitleProps) {
@@ -31,24 +39,41 @@ export function SelectBoxWithTitle(props: SelectBoxWithTitleProps) {
     optionSelectedSetter,
     vertical,
     width,
-    height
+    height,
+    information,
+    improvementPointSetter,
+    spentImprovementPoints
   } = props;
 
-  const [selectedValue, setSelectedValue] = useState('-1');
+  const [selectedValue, setSelectedValue] = useState<string>('-1');
+  const [modValue, setModValue] = useState<number>(0);
 
   const updateAttributeState = useStore((state) => state.updateAttribute);
   const lowerCaseSelectBoxId = id.split('StatBox')[0].toLowerCase();
+  let totalValue = 0;
+  const selectedValueOption = Number(
+    options.at(Number(selectedValue) + 1)?.displayValue
+  );
 
-  const handleChange = (event: SelectChangeEvent) => {
-    const value = event.target.value;
+  if (selectedValue !== '-1') {
+    totalValue = selectedValueOption + modValue;
+  } else {
+    totalValue = modValue;
+  }
+
+  useEffect(() => {
+    updateAttributeState(lowerCaseSelectBoxId, totalValue);
+  }, [selectedValue, modValue]);
+
+  const improvementPoints = useStore((state) => state.improvementPoints);
+
+  function handleSelectChange(event: SelectChangeEvent) {
+    const value = String(event.target.value);
+
     const numValue = Number(value);
     const prevValue = Number(selectedValue);
 
     setSelectedValue(value);
-    updateAttributeState(
-      lowerCaseSelectBoxId,
-      numValue === -1 ? 0 : Number(options.at(numValue + 1)?.displayValue)
-    );
 
     if (optionsAlreadySelected.includes(prevValue)) {
       const index = optionsAlreadySelected.indexOf(prevValue);
@@ -62,7 +87,21 @@ export function SelectBoxWithTitle(props: SelectBoxWithTitleProps) {
     } else if (numValue !== -1) {
       optionSelectedSetter([...optionsAlreadySelected, numValue]);
     }
-  };
+  }
+
+  function handleIncrement() {
+    if (spentImprovementPoints < improvementPoints) {
+      improvementPointSetter('increment');
+      setModValue(modValue + 1);
+    }
+  }
+
+  function handleDecrement() {
+    if (spentImprovementPoints > 0 && modValue > 0) {
+      improvementPointSetter('decrement');
+      setModValue(modValue - 1);
+    }
+  }
 
   const alteredRemovalArray = optionsAlreadySelected.filter(
     (x) => x !== Number(selectedValue)
@@ -82,21 +121,23 @@ export function SelectBoxWithTitle(props: SelectBoxWithTitleProps) {
         })
       }}
     >
-      <Typography
-        align="center"
-        sx={{
-          height: height,
-          paddingRight: '0.2em',
-          fontSize: '1rem',
-          ...(vertical && { backgroundColor: [colour] })
-        }}
-      >
-        {title}
-      </Typography>
+      <InfoTooltip information={information} direction="right">
+        <Typography
+          align="center"
+          sx={{
+            height: height,
+            paddingRight: '0.2em',
+            fontSize: '1rem',
+            ...(vertical && { backgroundColor: [colour] })
+          }}
+        >
+          {title}
+        </Typography>
+      </InfoTooltip>
       <Select
         id={id}
         value={selectedValue}
-        onChange={handleChange}
+        onChange={handleSelectChange}
         MenuProps={{ MenuListProps: { sx: { backgroundColor: 'white' } } }}
       >
         {options
@@ -107,6 +148,36 @@ export function SelectBoxWithTitle(props: SelectBoxWithTitleProps) {
             </MenuItem>
           ))}
       </Select>
+      <ButtonGroup
+        variant="contained"
+        size="small"
+        disableElevation={true}
+        fullWidth={true}
+        sx={{
+          '& .MuiButtonBase-root': {
+            borderRadius: '0px'
+          }
+        }}
+      >
+        <Button onClick={handleDecrement}>-</Button>
+        <Button onClick={handleIncrement}>+</Button>
+      </ButtonGroup>
+      {/* Box displaying modifiers */}
+      <TextBoxWithTitle
+        id={id + 'Modifer'}
+        title="Modifier:"
+        value={'+ ' + modValue}
+        vertical={true}
+        borderThickness={0}
+      />
+      {/* Box displaying total */}
+      <TextBoxWithTitle
+        id={id + 'Total'}
+        title="Total:"
+        value={totalValue}
+        vertical={true}
+        borderThickness={0}
+      />
     </Stack>
   );
 }
