@@ -8,9 +8,14 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Grid id="Grid_Container" container spacing={2} sx={{ marginY: '0.5em' }}>
+      <Grid
+        data-testid="Grid_Container"
+        container
+        spacing={2}
+        sx={{ marginY: '0.5em' }}
+      >
         <Grid
-          id="Grid_LeftColumn"
+          data-testid="Grid_LeftColumn"
           container
           item
           xs={3}
@@ -25,12 +30,12 @@ function App() {
           </Grid>
         </Grid>
 
-        <Grid id="Grid_CenterColumn" item xs={6}>
+        <Grid data-testid="Grid_CenterColumn" item xs={6}>
           <SelectorBox />
         </Grid>
 
         <Grid
-          id="Grid_RightColumn"
+          data-testid="Grid_RightColumn"
           item
           xs={3}
           sx={{ marginRight: '0.5em' }}

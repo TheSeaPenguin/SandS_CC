@@ -1,7 +1,7 @@
 import { Stack } from '@mui/material';
 import {
   InfoTooltip,
-  SelectBoxWithTitle,
+  AttributeSelectModBox,
   TextBoxWithTitle
 } from '../../components';
 import { useState } from 'react';
@@ -52,7 +52,7 @@ export function AttributeSelector(props: AttributeSelectorProps) {
         spacing={spacing}
         sx={{ marginY: '1em' }}
       >
-        <SelectBoxWithTitle
+        <AttributeSelectModBox
           id="EarthStatBox"
           title="Earth:"
           options={attributeValues}
@@ -66,7 +66,7 @@ export function AttributeSelector(props: AttributeSelectorProps) {
           improvementPointSetter={alterSpentImprovementPoints}
           spentImprovementPoints={spentImprovementPoints}
         />
-        <SelectBoxWithTitle
+        <AttributeSelectModBox
           id="WaterStatBox"
           title="Water:"
           options={attributeValues}
@@ -80,7 +80,7 @@ export function AttributeSelector(props: AttributeSelectorProps) {
           improvementPointSetter={alterSpentImprovementPoints}
           spentImprovementPoints={spentImprovementPoints}
         />
-        <SelectBoxWithTitle
+        <AttributeSelectModBox
           id="FireStatBox"
           title="Fire:"
           options={attributeValues}
@@ -94,7 +94,7 @@ export function AttributeSelector(props: AttributeSelectorProps) {
           improvementPointSetter={alterSpentImprovementPoints}
           spentImprovementPoints={spentImprovementPoints}
         />
-        <SelectBoxWithTitle
+        <AttributeSelectModBox
           id="AirStatBox:"
           title="Air:"
           options={attributeValues}

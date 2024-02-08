@@ -33,12 +33,12 @@ export function SelectorBox() {
       title: 'Attribute Assignment',
       content: <AttributesTab />,
       colour: '#FD8A8A'
+    },
+    {
+      title: 'Race',
+      content: <div>This is a random div tag</div>,
+      colour: '#9EA1D4'
     }
-    // {
-    //   title: 'Race',
-    //   content: <div>This is a random div tag</div>,
-    //   colour: '#9EA1D4'
-    // },
     // {
     //   title: 'Archetype',
     //   content: <div>This is a random div tag</div>,
