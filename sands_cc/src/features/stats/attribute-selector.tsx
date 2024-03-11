@@ -27,7 +27,7 @@ export function AttributeSelector(props: AttributeSelectorProps) {
     { id: 0, displayValue: '0' },
     { id: 1, displayValue: '1' },
     { id: 2, displayValue: '1' },
-    { id: 3, displayValue: '2' }
+    { id: 3, displayValue: '3' }
   ];
 
   const earthDesc =

@@ -44,6 +44,7 @@ export function TextBoxWithTitle(props: TextBoxWithTitleProps) {
       </Typography>
       <Typography
         id={id}
+        data-testid={id + 'Value'}
         align="center"
         sx={{
           height: height,
