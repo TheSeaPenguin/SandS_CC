@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { AttributeSelector } from '../stats';
-import { Stack, Typography } from '@mui/material';
+import { Stack, Typography, useMediaQuery } from '@mui/material';
 import { InfoOutlined } from '@mui/icons-material';
 import { InfoBox, TextBoxWithTitle } from '../../components';
 import { useStore } from '../../hooks/useStore';
@@ -9,6 +9,8 @@ import { theme } from '../../theme';
 export interface AttributesTabProps {}
 
 export function AttributesTab(props: AttributesTabProps) {
+  const screenMatchesMedium = useMediaQuery(theme.breakpoints.up('md'));
+  const spacingSize = screenMatchesMedium ? 2 : 0.5;
   return (
     <>
       <InfoBox
@@ -23,7 +25,7 @@ export function AttributesTab(props: AttributesTabProps) {
         vertical={false}
         width={'25%'}
         height={'3vh'}
-        spacing={2}
+        spacing={spacingSize}
       />
     </>
   );
