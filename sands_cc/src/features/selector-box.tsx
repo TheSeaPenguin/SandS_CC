@@ -1,5 +1,6 @@
 import { TabbedBox } from '../components/tabbed-box';
 import { AttributesTab } from './tabs';
+import { RacesTab } from './tabs/races-tab';
 
 export interface SelectorBoxTab {
   title: string;
@@ -36,32 +37,32 @@ export function SelectorBox() {
     },
     {
       title: 'Race',
-      content: <div>This is a random div tag</div>,
+      content: <RacesTab />,
       colour: '#9EA1D4'
     }
     // {
     //   title: 'Archetype',
-    //   content: <div>This is a random div tag</div>,
+    //   content: <div>Activate tab in Selector-Box</div>,
     //   colour: '#CEEDC7'
     // },
     // {
     //   title: 'Background',
-    //   content: <div>This is a random div tag</div>,
+    //   content: <div>Activate tab in Selector-Box</div>,
     //   colour: '#86C8BC'
     // },
     // {
     //   title: 'Skills',
-    //   content: <div>This is a random div tag</div>,
+    //   content: <div>Activate tab in Selector-Box</div>,
     //   colour: '#FFD4B2'
     // },
     // {
     //   title: 'Talents',
-    //   content: <div>This is a random div tag</div>,
+    //   content: <div>Activate tab in Selector-Box</div>,
     //   colour: '#F1F7B5'
     // },
     // {
     //   title: 'Equipment',
-    //   content: <div>This is a random div tag</div>,
+    //   content: <div>Activate tab in Selector-Box</div>,
     //   colour: '#FFF6BD'
     // }
   ];
