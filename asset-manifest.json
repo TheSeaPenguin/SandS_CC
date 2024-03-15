@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/SandS_CC/static/css/main.5510be88.css",
-    "main.js": "/SandS_CC/static/js/main.f1934c62.js",
+    "main.js": "/SandS_CC/static/js/main.c01e153e.js",
     "static/media/IMFellEnglishSC-Regular.ttf": "/SandS_CC/static/media/IMFellEnglishSC-Regular.16a17c4b1e505e3f1a54.ttf",
     "static/media/TradeWinds-Regular.ttf": "/SandS_CC/static/media/TradeWinds-Regular.469d1dc07c4bed94ebc8.ttf",
     "static/media/im-fell-english-sc-latin-400-normal.woff": "/SandS_CC/static/media/im-fell-english-sc-latin-400-normal.d82d72ef9448a5cbe95e.woff",
@@ -12,10 +12,10 @@
     "static/media/SandSLogo_93x84.png": "/SandS_CC/static/media/SandSLogo_93x84.46b64c1d457536be7036.png",
     "index.html": "/SandS_CC/index.html",
     "main.5510be88.css.map": "/SandS_CC/static/css/main.5510be88.css.map",
-    "main.f1934c62.js.map": "/SandS_CC/static/js/main.f1934c62.js.map"
+    "main.c01e153e.js.map": "/SandS_CC/static/js/main.c01e153e.js.map"
   },
   "entrypoints": [
     "static/css/main.5510be88.css",
-    "static/js/main.f1934c62.js"
+    "static/js/main.c01e153e.js"
   ]
 }
