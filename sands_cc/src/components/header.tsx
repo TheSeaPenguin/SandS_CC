@@ -1,5 +1,5 @@
 import { Box, Stack, Typography } from '@mui/material';
-import SandSLogoSmall from '../assets/images/SandSLogo_93x84.png';
+import SandSLogoSmall from '../assets/images/logo/SandSLogo_93x84.png';
 
 export interface HeaderProps {}
 
