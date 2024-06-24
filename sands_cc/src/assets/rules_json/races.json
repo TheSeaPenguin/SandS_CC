@@ -1,0 +1,321 @@
+{
+  "races": [
+    {
+      "name": "Human",
+      "type": "Humanoid",
+      "description": "Humans are the most widespread and populous race on Coryphiel. They control the vast majority of the civilised world, and have a variety of different cultures and nations. They have settled anywhere possible, adapting to any environment and surviving against the odds. Being surrounded by powerful monsters and magical entities, humans have had to innovate to survive. As a result, humans are the most technologically advanced race in the world.",
+      "benefits": [
+        {
+          "title": "Attribute Bonus:",
+          "description": "Add 1 to any Attribute."
+        },
+        { "title": "Talented:", "description": "Gain an extra Trait." },
+        {
+          "title": "Versatile:",
+          "description": "Add 1 to a Passive Response of your choice."
+        }
+      ],
+      "optionalAbilities": [
+        {
+          "title": "Improvise",
+          "cpCost": 2,
+          "energyCost": 1,
+          "actionCost": "Free Action",
+          "description": "Once per turn, immediately after making a d20 roll, you may activate this ability to choose up to two of your Traits or Expertises which could be relevant to the roll, adding an additional instance of your Skill Bonus to the result for each chosen Trait/Expertise."
+        }
+      ]
+    },
+    {
+      "name": "Cambion",
+      "type": "Dark Humanoid",
+      "description": "Cambions, also known as Demon-Kin, are humans, who are corrupted by the Dark side of the Divine, and as such have taken on demonic traits.",
+      "creation": "Cambions can be created in a number of ways. A child with a demonic or cambion parent will share in this demonic heritage. Cambions can also be formed if a human is corrupted by Darkness, but strong-willed enough to prevent being turned into a full demon. A human can be corrupted through proximity to Darkness or being cursed by a dark entity. In some places, Dark rituals are performed to intentionally transform a person into a Cambion, in order to make them stronger. The transformation into a Cambion is one stage of the metamorphosis into a full demon. The process is usually irreversible, but it can be halted or accelerated by the will of the cambion themselves.",
+      "appearance": "Cambions are mostly human in form, but have a few traits that mark them as being distinctly different. The most common cambion traits are sharp claws, red eyes, and horns on the head. Some may have an inhuman skin colour, a long tail, or sharp fangs.",
+      "humanRelations": "The existence of cambions is a divisive and controversial issue among many human societies. Depending on the culture of a location, cambions can be anything from useful, to abhorred. Any society which reveres the Light tends to view cambions as inherently evil, and may attempt everything from curing them, to destroying them. More pragmatic societies will tend to be less judgemental, and some rare places may worship cambions.",
+      "characteristics": "Cambions are innately tainted by Darkness. This doesn't make them evil, but it does mean they are often more short-tempered, indulgent, and erratic, and usually apathetic towards laws and authority figures. If they allow this part of them to take hold, they can develop into becoming bloodthirsty, hedonistic, and chaotic. Cambions who continue on this path, and allow darkness to consume them, may become fully demonic, and lose control of their minds.",
+      "benefits": [
+        {
+          "title": "Attribute Bonus:",
+          "description": "Add 1 to either your Water or Fire Attribute."
+        },
+        { "title": "Frenzy:", "description": "+1 Movement, +1 Energy" },
+        {
+          "title": "Teeth & Claws:",
+          "description": "Your standard Unarmed Attacks deal 1d6 Blunt / Cut / Pierce damage."
+        },
+        {
+          "title": "Dark Affinity:",
+          "description": "Gain Resistance to Shadow damage, and Vulnerability to Radiant damage. You are unable to use Light magic."
+        },
+        {
+          "title": "Nocturnal",
+          "description": "You are able to see without penalty in dim light and at night, but not in pitch-black darkness."
+        }
+      ],
+      "optionalAbilities": [
+        {
+          "title": "Shadow Step",
+          "cpCost": 2,
+          "energyCost": 1,
+          "actionCost": "Bonus Action or Reaction.",
+          "description": "Shadow Step allows you to teleport through the darkness. It can only be activated if you are in an area of Dim Light or Darkness, and you can only travel to an area of Dim Light or Darkness which you can see within a Short Range (6 spaces). You can only bring equipment that you would be able to carry normally, without having your movement impeded. You cannot use Shadow Step while you are Snared or Restrained. If you use Shadow Step to dodge an attack, you may roll for casting instead of doing an evading or blocking roll. If you fail this roll, you spend the Energy, but do not successfully teleport away."
+        },
+        {
+          "title": "Frenzied Strike",
+          "cpCost": 2,
+          "energyCost": 1,
+          "actionCost": "Free Action",
+          "description": "You gain 1 point of Panic whenever you use this ability. You can use Frenzied Strike at any point during your turn. When you do so, you move a number of spaces equal to your dash distance closer to an enemy creature you can see. If you end this movement within your unarmed melee range of that creature, you may make a free unarmed melee attack against them. This attack deals an extra 1d6 Shadow damage on a hit. You cannot use Frenzied Strike if you are Snared or Restrained."
+        },
+        {
+          "title": "Subterfuge:",
+          "cpCost": 2,
+          "energyCost": 1,
+          "actionCost": "Bonus Action",
+          "duration": "10 Minutes",
+          "description": "Using this ability allows you to subtly shift shadows to cover up your dark appearance. For the duration, most creatures would be unable to tell that you are a Cambion. If you possess any mutations, this ability can cover those up too. Additionally, while subterfuge is active you receive a +1 bonus to Stealth and Deception checks. A creature which succeeds a Perception-based check against your Prowess DR may be able to tell that you are using magic to hide your true appearance. You cannot use Subterfuge while in an area of bright light, such as direct sunlight or close to a light source. If you enter such an area while Subterfuge is active, the ability ends early."
+        }
+      ]
+    },
+    {
+      "name": "Clockwork",
+      "type": "Construct Humanoid",
+      "description": "Clockwork Golems are artificial entities created by humans, from intricate clockwork machinery, encased in a humanoid shell of metal and ceramics. They possess a humanlike level of intelligence, but are not organic beings.",
+      "creation": "The process of creating a clockwork golem is expensive and complicated. The knowledge and expertise to create them is rare, but the result is well worth it. Clockworks are bespoke creations, each one being unique in appearance and capability. Clockworks are sometimes created by independent scientists, but more commonly created by institutions or companies, to fulfil a specific purpose, such as to act as servants or soldiers. Clockworks are a fairly recent creation, meaning that all clockworks are somewhat young, despite usually being created with an adult level of intelligence.",
+      "appearance": "Clockworks vary in appearance due to their artificial nature, however they usually share some common traits. Clockworks are almost entirely humanoid in shape, and are crafted from brass and steel. They are usually made with an exterior chassis, to protect the complex gears and cogs which keep them working. This shell is usually plain, but is sometimes decorated. Older clockworks, or those who have led a dangerous life, may have parts of them mis-matching, as they have had to replace parts of their chassis, or even limbs. Most clockworks have very plain faces, with only a pair of glowing circular lenses for eyes. However, some clockworks may have stylised facial features, or a head shaped like a helmet, or something entirely inhuman.",
+      "humanRelations": "How clockworks are perceived depends entirely on the context. Most people see them as a marvelous pinnacle of technology, but very few people see them as being equal to humans. Some humans may even treat clockworks as if they are slaves. The tensions between these beings are mutual. Many clockworks have grown resentful of their creators, and struck out on their own in a bid for independence.",
+      "characteristics": "A Clockwork's robotic speech and movement often belies the complicated and intelligent mind within. Though it may not always be evident, Clockworks are capable of a wide range of emotions, just like any human, and have the potential to be just as empathetic and sentimental. They also have the advantage of advanced calculation capabilities, they are able to compute complex arithmetic and excel at anything that requires logic. Nevertheless, this is complicated by the fact that they usually possess fully mature and developed minds from the moment they are created, and thus must often spend a long time learning about the world around them. Clockworks being a fairly recent creation, the oldest clockworks are still younger than most humans, and have a lot of developing left to go through.",
+      "benefits": [
+        {
+          "title": "Attribute Bonus:",
+          "description": "Add 1 to any Attribute."
+        },
+        {
+          "title": "Steel Chassis:",
+          "description": "Gain Innate Armour, with Protection 3."
+        },
+        {
+          "title": "Resistances and Immunities:",
+          "description": "Clockwork Golems have the following special resistances: Resistance to Soul Damage, Immunity to Blight Damage."
+        },
+        {
+          "title": "Logical Processes:",
+          "description": "+2 Resolve. Advantage on rolls to oppose psychological effects such as Panic or Fear."
+        },
+        {
+          "title": "Mechanical Form:",
+          "description": "Clockwork Golems are constructed of metal and ceramics, as opposed to flesh and blood. As such, a lot of things that would work on humans do not work on them. Clockwork Golems are completely immune to the effects of Poisons, Disease, Bleeding and anything which deals Blight damage. Additionally, Clockworks do not need to eat, drink, or breathe. Clockworks sink underwater. Being underwater will affect a clockwork's internal mechanisms, so they cannot spend too long immersed; use the same set of rules for humans holding their breath underwater and suffocating."
+        },
+        {
+          "title": "Ticking Along:",
+          "description": "Clockwork Golems don't sleep but they do need a 4 hour 'rest' period every day, where they wind down. This essentially means Clockworks can complete long rests in only 4 hours, instead of 8. Clockworks are immune to any effects which would force them into Unconsciousness, other than Panic and Exhaustion."
+        },
+        {
+          "title": "No Natural Healing:",
+          "description": "Clockwork's do not recover HP or Wounds from any Healing Items, Healing Magic, Medicine, or Resting. Repair Kits must be used to heal a Clockwork, and function the same as Healing Kits do for a human."
+        }
+      ],
+      "racialOptions": {
+        "title": "Built for Purpose",
+        "description": "Choose one of the following:",
+        "options": [
+          {
+            "title": "Aquatic Machine:",
+            "description": "Instead of sinking in water, you are able to swim at your regular movement speed. You suffer no penalty for Attacks, Responses, and Skill Checks made underwater. You can remain underwater indefinitely and are not harmed by it."
+          },
+          {
+            "title": "Clambering Machine:",
+            "description": "+1 Movement Speed. You are able to climb across any vertical surfaces, and even ceilings, at your movement speed."
+          },
+          {
+            "title": "Diplomat Machine:",
+            "description": "Gain the ability to speak, read, and write all major modern languages."
+          },
+          {
+            "title": "Fighter Machine:",
+            "description": "Gain an additional weapons proficiency and up to two weapons (of size Medium or smaller) built into your arms. These are considered concealed when sheathed, and can be equipped as a Free Action You cannot be disarmed of these weapons, and they are useless if removed from you. You must still pay the equipment cost for these weapons, at half price."
+          },
+          {
+            "title": "High Quality Construction:",
+            "description": "+4 HP, +1 Energy."
+          },
+          {
+            "title": "Mighty Machine:",
+            "description": "Your size category becomes “Heavy”, granting the effects of being a large creature, but not increasing your size on the grid. (See “Rules for Creature Size” for details). You also Gain +2 Endurance, +1 Reach on melee attacks, and a +1 modifier to all Earth-Based Skill Checks. However, you suffer -2 Evasion, and may recieve penalties for hiding or getting into small places."
+          },
+          {
+            "title": "Multi-Tasking Machine:",
+            "description": "Gain two additional arms."
+          },
+          {
+            "title": "Sentry Machine:",
+            "description": "Gain the ability to see without penalty in Dim Light, but not complete darkness, and +1 Awareness."
+          }
+        ]
+      },
+      "optionalAbilities": [
+        {
+          "title": "Analogue Databanks",
+          "cpCost": 2,
+          "energyCost": 1,
+          "actionCost": "Bonus Action",
+          "duration": "10 Minutes",
+          "description": "When you gain this ability choose four Expertises which you do not already have. Note these down as being stored in your databanks. When you activate this ability, you can choose one of those stored Expertises to gain for the duration."
+        },
+        {
+          "title": "Overclock",
+          "cpCost": 2,
+          "energyCost": 1,
+          "actionCost": "Free Action",
+          "duration": "1 Turn",
+          "description": "You can activate this ability at the start of your turn. When you do so, you gain the following benefits: +3 Movement, +1 Reaction, when you use an Action to Attack you may make one additional Attack, if possible. Non-Attack Abilities which are normally Actions can be performed as a Bonus Action. However, when the duration ends you suffer 1 point of Exhaustion, and are Slowed for 3 turns. During these 3 turns you cannot activate Overclock again."
+        }
+      ]
+    },
+    {
+      "name": "Denizen",
+      "type": "Humanoid Arcana",
+      "description": "Denizens are mysterious entities who live in another realm known as the Otherworld. They are creatures of magic, with their own powerful civilisation, but rarely seen on Coryphiel.",
+      "appearance": "Outside of the Otherworld, Denizens like to be heavily covered up in robes and veils. This means that even the few humans who have met Denizens would likely have only seen the glowing eyes that peek out under their hoods and masks. Under their robes, Denizens have dark blue skin. Their blood glows, usually blue, and so do their eyes and the interior of their mouths. They do not have noses, and their hands have only two fingers and a thumb on each. Denizens can have anywhere between one and five eyes.",
+      "creation": "A Denizen's body may mimic the form of one made from flesh and blood, but in fact they are created from pure arcane energy. This gives them a number of benefits, such as resistance to physical harm, but more importantly it prevents their body from ageing. However, the constitution of their physical form is inextricably linked to their mental fortitude, which is one of the reasons they focus on law and organisation so fiercely. A Denizen has about 200 years before they start to lose their grip on reality, both literally and figuratively.",
+      "characteristics": "Denizens have a reputation for being highly litigious and bureaucratic, always following the rules to the letter. Though their society does encourage this culture, this is hardly representative of all Denizens; they have as much range of personalities as humans do. However there are Six Laws in particular which most Denizens treat as sacred. These laws mostly revolve around protecting the Otherworld, and keeping the structure of their society intact. Anybody who breaks one of these laws is cast out of their society and branded as a 'Maletha', a rogue Denizen.",
+      "humanRelations": "Human interaction with Denizens is rare. Denizens sometimes cross the border to Coryphiel, but very rarely allow Humans into the Otherworld. Of those Denizens who do cross into Coryphiel, most are either researchers and diplomats, or runaway “Maletha”, seeking shelter among humankind.",
+      "benefits": [
+        {
+          "title": "Attribute Bonus:",
+          "description": "Add 1 to either your Fire or Air Attribute."
+        },
+        {
+          "title": "Mental Aptitude:",
+          "description": "+1 Resolve, +1 Awareness, +1 Concentrating, +1 Reacting."
+        },
+        {
+          "title": "Magical Form:",
+          "description": "Resistance to all Physical damage, Resistant to Blight damage, Immunity to the Diseased condition, and Maximum HP is reduced by 4."
+        },
+        {
+          "title": "Unstable Form:",
+          "description": "When a Denizen suffers an Injury, or suffers an amount of Panic or Exhaustion equal to its Wound Capacity, instead of the usual results, it begins 'Disintegrating'. Disintegrating: This creature's Maximum HP and Energy are halved, HP restoration they receive is halved, and their Endurance and Resolve are halved."
+        }
+      ],
+      "optionalAbilities": [
+        {
+          "title": "Levitate",
+          "cpCost": 2,
+          "energyCost": 1,
+          "actionCost": "Free Action",
+          "duration": "10 Minutes",
+          "description": "When this ability is activated, you gain the ability to Levitate at your movement speed, up to 3 spaces above the ground."
+        },
+        {
+          "title": "Realm-phase",
+          "cpCost": 2,
+          "energyCost": 1,
+          "actionCost": "Free Action",
+          "duration": "3 Turn",
+          "description": "Activate this as a free action at the start of your turn, to slip partially into the space between realms. If you do so, for the duration you gain +2 Movement, +2 Evasion, become able to move through other creature’s spaces, ignore Terrain effects, and creatures have Disadvantage on rolls made to grapple, restrain, or otherwise physically impede you. Additionally, whenever you would deal Physical damage you can choose to deal Arcane damage instead. You cannot use Realm-phase while Snared or Restrained."
+        },
+        {
+          "title": "Binding Contract",
+          "cpCost": 3,
+          "actionCost": "Action",
+          "requirements": "Expertise in Bureaucracy",
+          "description": "This ability allows you to sign a magical binding contract with one willing creature of your choice within 3 spaces.  When creating the contract you can choose any number of the below features to be included. You can also specify whether or not you or the bound creature need to be willing in order for these features to be used. Contract Optional Features: Allow the bound creature to summon you to its side, as an Action and at the cost of 3 Energy, wherever either of you are. Allow yourself to see through the eyes of the Bound creature, and hear through their ears, this is a Bonus Action to activate, costs 1 Energy, and lasts 10 minutes; while doing this you will have Disadvantage on perception-based checks using your own senses, and your Awareness is halved. Allows each creature involved in the contract to send a telepathic message to the other, regardless of distance, this is a Free Action and each sentence costs 1 Energy. Whenever one of you takes damage, it is split, so that each creature bound by the contract takes half of the result. You can spend the Bound creature's Energy as if it was your own, and vice versa. Terms and Conditions:  Both creatures must be willing to enter the contract. However, a creature does not have to read the contract in its entirety in order to sign it. An inattentive creature may sign up for something which doesn't benefit them. You may add conditions which will cause the contract to be broken (e.g. if the bound creature attacks you), and you can specify an amount of time that the contract will last. You cannot end the contract unless these conditions are met. Contracts last forever unless otherwise specified, but you can only have one contract active at a time. You can end the contract if both creatures are willing to do so as an Action at any point."
+        }
+      ]
+    },
+    {
+      "name": "Deva",
+      "type": "Light Humanoid",
+      "description": "Deva are humans who have been touched by the divine Light, and have angelic traits. They can be considered the opposite of Cambions.",
+      "creation": "Deva are one of the rarest strains of humans, far rarer than their dark counterpart Cambions. Rather than being an accident of divine magic, Deva are supposedly hand-picked by the gods, though not to become full angels. This may be for the purposes of being a part of human society, and interacting better with humans than the aloof and emotionless angels who serve the gods more directly.",
+      "appearance": "The most common deva traits are softly glowing skin and hair, and golden blood. Many Deva have golden marks across their skin, feathers on their arms or back, and even halo-like structures on their head.",
+      "humanRelations": "Despite their rarity, Deva are generally accepted in human societies, especially those which revere the Light. Unlike Cambions, they are not considered particularly dangerous, and have a reputation for helping communities they live amongst, regardless of whether this is true on a case by case basis. However, certain religions, especially those devoted to Darkness, may be biased against Deva, seeing them as overzealous crusaders.",
+      "characteristics": "Deva are designed to serve the will of the light, though they are not as blindly obedient to the gods as true Angels. Deva retain their free will, however the influence of the light is often reflected in their personality. Devas will usually be ambitious and optimistic, often stubbornly committed to their goals and ideals, to varying degrees of extremity. Many are incredibly selfless, to the detriment of their own well-being. Others may be violently zealous, and commit horrible actions in the name of their aspirations. Not all Deva are entirely loyal to the Light, though in their position it can be difficult to turn away. There is a lot of pressure on Deva to succeed and propagate the Light, they are champions who usually did not choose to be. Many Deva feel constantly watched by the gods, and gain a paranoid fear of making mistakes or stepping out of line. Those Deva who do turn from the will of the Light are often subtly punished for doing so. They may find the benefits of their divine form diminish, or become unreliable. They may suffer terrible nightmares or visions of torment. Some may suffer worse fates, the Light does not like to be disappointed or betrayed.",
+      "benefits": [
+        {
+          "title": "Attribute Bonus:",
+          "description": "Add 1 to either your Earth or Fire Attribute."
+        },
+        {
+          "title": "Divine Blood:",
+          "description": "3 Innate Protection against Elemental and Arcane damage."
+        },
+        {
+          "title": "Searing Touch:",
+          "description": "You gain an Unarmed Attack which deals 1d6 Radiant damage."
+        },
+        {
+          "title": "Light Affinity:",
+          "description": "Gain Resistance to Radiant damage, and Vulnerability to Shadow damage. You are unable to use Dark magic."
+        },
+        {
+          "title": "Divine Glow:",
+          "description": "As a Free Action you can cause parts of your body to glow, emitting bright light in a 4 space radius. If you are in pitch darkness, this is reduced to a 1 space radius. This does not count as a light source for the sake of using any Light magic you may have."
+        }
+      ],
+      "optionalAbilities": [
+        {
+          "title": "Angelic Flight:",
+          "cpCost": 2,
+          "actionCost": "Bonus Action",
+          "duration": "6 Turn",
+          "description": "For the duration of this ability, golden angelic wings sprout from your back and you are able to Fly, at a speed equal to your standard Movement Speed +4. You have Disadvantage on ranged attacks you make while Flying."
+        },
+        {
+          "title": "Inner Radiance:",
+          "cpCost": 2,
+          "energyCost": 1,
+          "hpCost": 3,
+          "actionCost": "Bonus Action or Reaction.",
+          "area": "1 space radius",
+          "range": "Caster",
+          "damage": "2d8 Radiant",
+          "description": "Summon searing radiant flames from within your body. When you activate this ability, roll Casting against the Evasion or Cover of creatures in the area, dealing damage on any successes. A creature which is involved in a grapple with you must spend a reaction and make a relevant roll to try and avoid this damage. It must escape the grapple in order to do this."
+        },
+        {
+          "title": "Wing Wall",
+          "cpCost": 2,
+          "energyCost": 1,
+          "actionCost": "Bonus Action or Reaction.",
+          "duration": "1 Turn",
+          "description": "Provides a Cover value equal to 9 plus your base Concentrating or Blocking modifier, to yourself and any friendly creatures within 1 space. Friendly creatures other than yourself also gain 3 Elemental and Arcane Protection while they are within 1 space of you for the duration."
+        }
+      ]
+    },
+    {
+      "name": "Dragonkin",
+      "type": "Draconoid Humanoid",
+      "description": "Dragonkin are humans, with the blood of dragons, and many draconic traits. They are fairly rare, but widespread, and are most common in civilisations who worship dragons.",
+      "creation": "Dragonkin are either the descendents of humans who have been “blessed” by ancient dragons, or have themselves been blessed. This blessing is a transformation, granting the human reptilian features, such as thick scales in certain places across their skin, sharp claws and teeth, or even a tail. Those who are transformed are known as the “Purestrain Dragonkin”, and pass these traits onto their descendents, though as the bloodline is diluted over the generations, these draconic features usually become less prominent. In the modern age, few new dragonkin are created, so most Dragonkin in the world were born that way.",
+      "appearance": "Dragonkin are as varied as dragons themselves, however, there are a few things that are consistent. Dragonkin have human faces, though they may have scaling on their brow or jaw. Most will have slit pupils, and some may even have large draconic horns upon their head. The most common features for dragonkin are scaled hands and feet, which end in sharp claws. Some may even have a reptilian tail. Dragonkin appearance is largely determined by the nature of the dragon who granted their ancestor a transformation. A Dragonkin with Earth Dragon heritage will usually have thicker scales, in colours of brown or grey, while a Dragonkin related to a Water Dragon will be more streamlined, with fins, and blue scales.",
+      "humanRelations": "Dragonkin are fairly rare in human society, but many can be found in civilisations which worship dragons, or in large diverse cities. They get along with humans easier than the other creatures in this list, since their minds and personalities are not too affected by their draconic traits, and they look mostly human. Some of the less subtle dragonkin can be ostracized by humans, especially in rural or intolerant societies.",
+      "benefits": [
+        {
+          "title": "Elemental Affinity:",
+          "description": "All Dragonkin are connected to an element, just like dragons are, and as such they often have a natural affinity for that element. If a Dragonkin learns magic, they are intuitively drawn to the element of their heritage. They also often have a personality which correlates with their element; Fire Dragonkin will be naturally passionate, and often quick to anger, Earth Dragonkin will be stoic and stubborn, and so on."
+        },
+        {
+          "title": "Attribute Bonus:",
+          "description": "Add 1 to either your Earth or Water Attribute."
+        },
+        { "title": "Dragon Blood:", "description": "+4 HP." },
+        {
+          "title": "Teeth & Claws:",
+          "description": "Your standard Unarmed Attacks deal 1d6 Blunt / Cut / Pierce damage."
+        }
+      ],
+      "racialOptions": {
+        "title": ""
+      },
+      "optionalAbilities": [
+        {
+          "title": "",
+          "cpCost": 0,
+          "actionCost": "",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

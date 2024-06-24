@@ -1,0 +1,339 @@
+[
+  {
+    "title": "Warrior",
+    "description": "The Warrior is an effective fighter, whether it be with powerful magical abilities or deadly strikes with a weapon. The Warrior can last long in a fight, and can deal damage more consistently than the Skirmisher or the Eliminator. Though the warrior has nothing particularly special about them, they are the most reliable choice for a fighting character.",
+    "startingBenefits": [
+      "Starting maximum HP is increased by 3.",
+      "Starting maximum Energy is increased by 1.",
+      "Every time you gain a Character Improvement, your maximum HP is improved by an additional 1."
+    ],
+    "responses": "Warriors may add their Skill Bonus to two Active Responses, two Passive Responses, and one extra of their choice from either.",
+    "destinyAbility": {
+      "title": "Valour",
+      "actionCost": "Free Action",
+      "description": "Once per turn, spend a Destiny Point to improve your combat prowess temporarily. Roll d6, until the start of your next turn, you receive this number rolled as a bonus to Attack rolls and offensive ability checks (an offensive ability check is any ability, magical or non-magical, which targets an unwilling creature)."
+    },
+    "abilities": [
+      {
+        "title": "Quick Attacks",
+        "cpLevel": 25,
+        "description": [
+          "You may Attack twice when you use an Action to Attack. You may choose different targets for the Attacks, and you can use whatever weapons you have equipped. You can move between Attacks. You cannot use a Bonus Action between attacks."
+        ]
+      },
+      {
+        "title": "Combat Ready",
+        "cpLevel": 30,
+        "description": [
+          "Once per Short Rest, when a combat situation begins and you roll for Turn Order, you instantly recover 1 Destiny."
+        ]
+      },
+      {
+        "title": "Warrior Training I",
+        "cpLevel": 35,
+        "description": [
+          "You get 1 extra Reaction.",
+          "Your Attribute Limit is increased to 5.",
+          "Maximum Energy +1."
+        ]
+      },
+      {
+        "title": "Indomitable",
+        "cpLevel": 40,
+        "description": [
+          "When you use Valour, you may roll two d6s and use the highest roll."
+        ]
+      },
+      {
+        "title": "Warrior Training II",
+        "cpLevel": 45,
+        "description": [
+          "You get 1 extra Reaction.",
+          "Your Attribute Limit is increased to 6.",
+          "Maximum Energy +1.",
+          "Maximum HP +4."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Skirmisher",
+    "description": "The skirmisher is a highly mobile character who can quickly traverse a battlefield and deal damage as they go. The skirmisher is not particularly tough, and so relies on their speed and strategic movement to stay safe. The skirmisher has an advantage over foes by being more mobile, able to avoid getting surrounded.",
+    "startingBenefits": [
+      "You have 1 extra Reaction.",
+      "You have additional Movement Speed equal to your Skill Bonus"
+    ],
+    "responses": "Skirmishers may add their Skill Bonus to two Active Responses, two Passive Responses, and one extra of their choice from either.",
+    "destinyAbility": {
+      "title": "Evasive",
+      "actionCost": "Free Action",
+      "description": "Once per turn, spend a Destiny point to temporarily become more evasive. Roll a d6, the number that you roll becomes a bonus modifier to Evading rolls and to your Evasion, and lasts until the start of your next turn. You can do this at any point when you make an Evading check, or something is opposed by your Evasion."
+    },
+    "abilities": [
+      {
+        "title": "Skirmish",
+        "cpRequired": 0,
+        "description": ["You may Disengage as a Bonus Action."]
+      },
+      {
+        "title": "Quick Attacks",
+        "cpLevel": 25,
+        "description": [
+          "You may Attack twice when you use an Action to Attack. You may choose different targets for the Attacks, and you can use whatever weapons you have equipped. You can move between Attacks. You cannot use a Bonus Action between attacks."
+        ]
+      },
+      {
+        "title": "Dasher",
+        "cpRequired": 30,
+        "description": ["You may dash twice a turn."]
+      },
+      {
+        "title": "Skirmisher Training I",
+        "cpRequired": 35,
+        "description": [
+          "You get 1 extra Reaction.",
+          "Your Attribute Limit is increased to 5."
+        ]
+      },
+      {
+        "title": "Slippery",
+        "cpRequired": 40,
+        "description": [
+          "Once per long rest, when you are the target of an effect that would negatively affect your movement, such as being slowed, snared, grappled or stunned, you may choose to automatically negate the effect. You may choose to do this after rolling to prevent it normally."
+        ]
+      },
+      {
+        "title": "Skirmisher Training II",
+        "cpRequired": 45,
+        "description": [
+          "You get 1 extra Reaction.",
+          "Your Attribute Limit is increased to 6.",
+          "Maximum Energy +1.",
+          "Movement Speed +1."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Tank",
+    "description": "The tank, as the name suggests, is a tough and resilient fighter whose most impressive feature is how they can resist and rebuff enemy attacks. A tanks role in combat is to make opponents attack them, so that their allies are safe. They can also be a powerful fighter, dishing out as much damage as they can take. A powerful tank is a nigh-unstoppable warrior, or a stalwart guardian for their allies.",
+    "advice": "Many tanks will garb themselves in heavy armour, but this is far from required. Some tanks may prefer the mobility of lighter armour, some might wear magical protections, and others may even summon magical shields and wards.",
+    "startingBenefits": [
+      "Starting maximum HP is increased by 6.",
+      "Every time you gain a Character Improvement, your maximum HP is improved by an additional 2."
+    ],
+    "responses": "Tanks may add their Skill Bonus to two Active Responses, two Passive Responses, and one extra of their choice from either.",
+    "destinyAbility": {
+      "title": "Feel No Pain",
+      "actionCost": "Free Action",
+      "description": "Once per turn, spend a Destiny Point to restore 2d6 HP instantly. Additionally, until the start of your next Turn, you do not suffer the penalties of being Wounded."
+    },
+    "abilities": [
+      {
+        "title": "Quick Attacks",
+        "cpLevel": 25,
+        "description": [
+          "You may Attack twice when you use an Action to Attack. You may choose different targets for the Attacks, and you can use whatever weapons you have equipped. You can move between Attacks. You cannot use a Bonus Action between attacks."
+        ]
+      },
+      {
+        "title": "Relentless",
+        "cpRequired": 30,
+        "description": ["Your Destiny Ability restores 3d6 HP instead."]
+      },
+      {
+        "title": "Tank Training I",
+        "cpRequired": 35,
+        "description": [
+          "You get 1 extra Reaction.",
+          "Your Attribute Limit is increased to 5.",
+          "Maximum HP +6."
+        ]
+      },
+      {
+        "title": "Unyielding",
+        "cpRequired": 40,
+        "description": [
+          "Nothing can keep you down. Once per Long Rest after being knocked to a state of Dying, you can immediately return, filled with determination. Restore 1 Wound, and you then ignore the effects of Wounds until the end of your next Turn."
+        ]
+      },
+      {
+        "title": "Tank Training II",
+        "cpRequired": 45,
+        "description": [
+          "Your Wound Capacity is increased by 1.",
+          "Your Attribute Limit is increased to 6.",
+          "Maximum HP +6."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Eliminator",
+    "description": "The Eliminator is an extremely powerful individual, while things are going according to plan. The Eliminator focuses on dealing high amounts of damage briefly, and killing or incapacitating opponents one by one. They are not suited to drawn-out fights, or being confronted by multiple combatants.",
+    "advice": "Eliminators often use stealth to their advantage, but this is not required for the archetype. A mage who incinerates opponents with sudden explosive spells could still be an Eliminator. Anyone who focuses on doing a lot of damage at once to a single target is an Eliminator.",
+    "startingBenefits": [
+      "When rolling damage, you may re-roll any dice with a result of 1. You may only re-roll each dice once."
+    ],
+    "responses": "Eliminators may add their Skill Bonus to two Active Responses and two Passive Responses.",
+    "destinyAbility": {
+      "title": "Eliminate",
+      "actionCost": "Free Action",
+      "description": "When you make an attack or use an ability that targets a single creature, you can spend a Destiny point to make it an Elimination. This means that when you roll to hit, you may roll an additional d6, and add its total to the attack roll, and to the damage. If you roll a 6 on this dice, the attack counts as a critical hit, if you hit."
+    },
+    "abilities": [
+      {
+        "title": "No Mercy",
+        "cpRequired": 25,
+        "description": [
+          "When you Attack, or cast a damaging ability at a creature which is Unaware, Low Alert, Stunned or out of Reactions, deal an additional 2d6 damage."
+        ]
+      },
+      {
+        "title": "Twist of Fate",
+        "cpRequired": 30,
+        "description": [
+          "When you inflict a Wound onto a creature which kills or incapacitates it, you may regain 1 Destiny. This only applies once per creature per day."
+        ]
+      },
+      {
+        "title": "Eliminator Training",
+        "cpRequired": 35,
+        "description": [
+          "You get 1 extra Reaction.",
+          "Your Attribute Limit is increased to 5."
+        ]
+      },
+      {
+        "title": "Perfect Hit",
+        "cpRequired": 40,
+        "description": [
+          "When you use Eliminate, you may roll the d6 twice and choose the highest of the two rolls."
+        ]
+      },
+      {
+        "title": "Lethal",
+        "cpRequired": 45,
+        "description": [
+          "Once per turn, before rolling for any kind of damage, you can choose one of the damage dice, and automatically set the result to the maximum on that dice.",
+          "Your Attribute Limit is increased to 6."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Support",
+    "description": "The support is typically not a very powerful individual on their own, and focuses on aiding their allies. Though often overlooked, the role of support is integral to the structure of the party. In combat, the support rarely directly harms their opponents, but may weaken or impair them so that their allies can fight more effectively. They may also heal or strengthen their allies, or perform other things that aids the group.",
+    "advice": "Outside of combat, supports are also very useful, and can perform many useful functions to aid the group. When playing a support you will rarely be in the spotlight, but you may be the only reason the rest of the players are still alive.",
+    "startingBenefits": [
+      "Gain an additional Trait. This does not count against your maximum.",
+      "Starting maximum Energy is increased by 1."
+    ],
+    "responses": "Supports may add their Skill Bonus to two Active Responses and two Passive Responses.",
+    "destinyAbility": {
+      "title": "Helping Hand",
+      "actionCost": "Reaction",
+      "description": "When an ally within a Close Range (3 spaces) makes a d20 roll for an  Attack, Casting, Response, Ability or Skill Check, you may spend a Destiny Point to improve their roll as a Dice Booster. Roll 2d6, the total is added to the allys roll as a bonus modifier. You can choose to do this after the ally has made the roll."
+    },
+    "abilities": [
+      {
+        "title": "Skill Mastery",
+        "cpRequired": 25,
+        "description": [
+          "Choose one of your Traits or Expertises. You gain 'Mastery' in it, allowing you to add an additional 2 to its modifier. Multiple instances of Mastery do not stack."
+        ]
+      },
+      {
+        "title": "Versatile I",
+        "cpRequired": 30,
+        "description": [
+          "Your maximum Destiny is increased by 1.",
+          "Choose one of the following: Maximum HP +4, Maximum Energy +2, Movement Speed +1"
+        ]
+      },
+      {
+        "title": "Support Training",
+        "cpRequired": 35,
+        "description": [
+          "You get 1 extra Reaction.",
+          "Your Attribute Limit is increased to 5.",
+          "Choose another Trait or Expertise to gain Mastery in."
+        ]
+      },
+      {
+        "title": "Inspirational",
+        "cpRequired": 40,
+        "description": [
+          "The range on “Helping Hand” is increased to Short (6 Spaces)."
+        ]
+      },
+      {
+        "title": "Versatile II",
+        "cpRequired": 45,
+        "description": [
+          "Your maximum Destiny is increased by 1.",
+          "Your Attribute Limit is increased to 6.",
+          "Choose one of the following: Maximum HP +6, Maximum Energy +4, Movement Speed +2"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Expert",
+    "description": "The expert, much like the Support, is typically not powerful on their own in combat. However, in many other situations, the expert is incredibly talented and can do things that no other member of the party is able to. They may be much more smart, sneaky, or charismatic than other players. They may focus on crafting brilliant inventions, or using magic that has versatile capabilities.",
+    "advice": "Though generally weaker combatants than the other players, they may be able to use their talents to their advantage in a fight. Playing an expert allows for creative use of skills, and thinking outside the box.",
+    "startingBenefits": [
+      "Gain an additional Trait or Expertise. This does not count against your maximum.",
+      "Starting maximum Energy is increased by 1."
+    ],
+    "responses": "Experts may add their Skill Bonus to two Active Responses and two Passive Responses.",
+    "destinyAbility": {
+      "title": "Eureka",
+      "actionCost": "Free Action",
+      "description": "Spend a Destiny point to give yourself a Dice Booster to a Skill Check which uses one of your Traits or Expertises. Roll 2d6, the total is the bonus modifier. You can choose to do this after you make the roll."
+    },
+    "abilities": [
+      {
+        "title": "Skill Mastery",
+        "cpRequired": 25,
+        "description": [
+          "Choose one of your traits or expertises. You gain 'Mastery' in it, allowing you to add an additional 2 to its modifier, on top of your Skill Bonus. Multiple instances of Mastery do not stack."
+        ]
+      },
+      {
+        "title": "Highly Trained I",
+        "cpRequired": 30,
+        "description": [
+          "Your maximum Destiny is increased by 1.",
+          "Gain an additional 2 Spare CP. This does not count towards your CP level, but can be spent as normal."
+        ]
+      },
+      {
+        "title": "Expert Training",
+        "cpRequired": 35,
+        "description": [
+          "You get 1 extra Reaction.",
+          "Your Attribute Limit is increased to 5.",
+          "Choose another Trait or Expertise to gain Mastery in."
+        ]
+      },
+      {
+        "title": "Knowhow",
+        "cpRequired": 40,
+        "description": [
+          "You can use Eureka on any skill check, even if you don't have a relevant trait or expertise."
+        ]
+      },
+      {
+        "title": "Highly Trained II",
+        "cpRequired": 45,
+        "description": [
+          "Your maximum Destiny is increased by 1.",
+          "Your Attribute Limit is increased to 6.",
+          "Gain an additional 2 Spare CP. This does not count towards your CP level, but can be spent on features.",
+          "Choose another Trait or Expertise to gain Mastery in."
+        ]
+      }
+    ]
+  }
+]

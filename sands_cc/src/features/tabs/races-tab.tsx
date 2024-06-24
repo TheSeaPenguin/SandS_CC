@@ -1,61 +1,86 @@
-import * as React from 'react';
-import Carousel from 'react-material-ui-carousel';
-import { Paper, Button, Grid } from '@mui/material';
-import { InfoBox } from '../../components';
+import {
+  Cambion,
+  Dragonkin_2,
+  Human,
+  Spriggan,
+  Clockwork,
+  Denizen,
+  Deva,
+  Elfbood
+} from '../../assets/images/race_400x600';
+import Grid from '@mui/material/Unstable_Grid2';
+import { ObjectCarousel } from '../../components/object-carousel';
+import { useJSONData } from '../../hooks/useJSONData';
+import { useState } from 'react';
+import { TextBoxWithTitle } from '../../components';
 
-export interface RacesTabProps {}
-
-export function RacesTab(props: RacesTabProps) {
-  const items = [
+export function RacesTab() {
+  const [currentRace, setRaceData] = useState('Human');
+  const races = [
     {
-      name: 'Random Name #1',
-      description: 'Probably the most random thing you have ever seen!'
+      title: 'Human',
+      image: Human
     },
     {
-      name: 'Random Name #2',
-      description: 'Hello World!'
+      title: 'Cambion',
+      image: Cambion
+    },
+    {
+      title: 'Dragonkin',
+      image: Dragonkin_2
+    },
+    {
+      title: 'Spriggan',
+      image: Spriggan
+    },
+    {
+      title: 'Clockwork',
+      image: Clockwork
+    },
+    {
+      title: 'Denizen',
+      image: Denizen
+    },
+    {
+      title: 'Deva',
+      image: Deva
+    },
+    {
+      title: 'Elfblood',
+      image: Elfbood
     }
   ];
 
+  const allFetchedData: object[] = useJSONData('races');
+  // const raceDetails = allFetchedData.find(
+  //   (value) => value.name === currentRace
+  // );
+  console.log(allFetchedData);
+  // console.log(raceDetails);
+
+  function handleCarouselChange(currentValue?: number) {
+    console.log(currentValue);
+    const race = currentValue ? races[currentValue].title : 'Human';
+    setRaceData(race);
+    console.log(currentRace);
+  }
+
   return (
-    <Grid>
-      <Carousel autoPlay={false}>
-        {items.map((item, i) => (
-          <Item key={i} item={item} />
-        ))}
-      </Carousel>
+    <Grid container spacing={2}>
+      <Grid xs={4}>
+        <ObjectCarousel
+          objects={races}
+          onChangeFunction={handleCarouselChange}
+        />
+      </Grid>
+      <Grid xs={4}>
+        <TextBoxWithTitle
+          title="Information"
+          vertical={true}
+          value=""
+          id={'Test'}
+        />
+      </Grid>
     </Grid>
-  );
-}
-
-function Item(props: {
-  item: {
-    name:
-      | string
-      | number
-      | boolean
-      | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-      | React.ReactFragment
-      | React.ReactPortal
-      | null
-      | undefined;
-    description:
-      | string
-      | number
-      | boolean
-      | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-      | React.ReactFragment
-      | React.ReactPortal
-      | null
-      | undefined;
-  };
-}) {
-  return (
-    <Paper>
-      <h2>{props.item.name}</h2>
-      <p>{props.item.description}</p>
-
-      <Button className="CheckButton">Check it out!</Button>
-    </Paper>
   );
 }

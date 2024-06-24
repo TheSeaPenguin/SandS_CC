@@ -8,3 +8,4 @@ export { AccordionContainer } from './accordion-container';
 export { InfoTooltip } from './info-tooltip';
 export { InfoBox } from './info-box';
 export { SelectBoxWithTitle } from './select-box-with-title';
+export { ObjectCarousel } from './object-carousel';
