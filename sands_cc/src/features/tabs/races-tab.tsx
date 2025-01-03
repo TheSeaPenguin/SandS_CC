@@ -12,10 +12,11 @@ import Grid from '@mui/material/Unstable_Grid2';
 import { ObjectCarousel } from '../../components/object-carousel';
 import { useJSONData } from '../../hooks/useJSONData';
 import { useState } from 'react';
-import { TextBoxWithTitle } from '../../components';
+import { SideBox, TextBoxWithTitle } from '../../components';
+import { Race } from '../../Types';
 
 export function RacesTab() {
-  const [currentRace, setRaceData] = useState('Human');
+  const [currentRace, setCurrentRace] = useState('Human');
   const races = [
     {
       title: 'Human',
@@ -51,35 +52,66 @@ export function RacesTab() {
     }
   ];
 
-  const allFetchedData: object[] = useJSONData('races');
-  // const raceDetails = allFetchedData.find(
-  //   (value) => value.name === currentRace
-  // );
-  console.log(allFetchedData);
-  // console.log(raceDetails);
+  const allFetchedData: Race[] = useJSONData('races');
+  const raceDetails = allFetchedData.find(
+    (value) => value.name === currentRace
+  );
 
   function handleCarouselChange(currentValue?: number) {
-    console.log(currentValue);
     const race = currentValue ? races[currentValue].title : 'Human';
-    setRaceData(race);
-    console.log(currentRace);
+    setCurrentRace(race);
   }
 
   return (
     <Grid container spacing={2}>
+      {/* The Picture carousel */}
       <Grid xs={4}>
         <ObjectCarousel
           objects={races}
           onChangeFunction={handleCarouselChange}
         />
       </Grid>
-      <Grid xs={4}>
+      {/* The central race information */}
+      <Grid xs={5}>
         <TextBoxWithTitle
           title="Information"
           vertical={true}
           value=""
-          id={'Test'}
+          id={'race-information'}
         />
+        <TextBoxWithTitle
+          id="text-raceDescription"
+          title="Description"
+          vertical={true}
+          value={
+            raceDetails ? raceDetails.description : 'Error reading description'
+          }
+        />
+        <TextBoxWithTitle
+          id="text-raceAppearance"
+          title="Appearance"
+          vertical={true}
+          value={
+            raceDetails ? raceDetails.appearance : 'Error reading appearance'
+          }
+        />
+      </Grid>
+      {/* Right hand-side race information */}
+      <Grid xs={3}>
+        <SideBox boxTitle="Benefits">
+          {raceDetails ? (
+            raceDetails.benefits.map((benefit) => (
+              <TextBoxWithTitle
+                id={'text-' + benefit.title}
+                title={benefit.title}
+                value={benefit.description}
+                vertical={true}
+              />
+            ))
+          ) : (
+            <div></div>
+          )}
+        </SideBox>
       </Grid>
     </Grid>
   );

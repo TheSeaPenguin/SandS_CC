@@ -30,8 +30,9 @@ export function ObjectCarousel(props: ObjectCarouselProps) {
             changeOnFirstRender={true}
             swipe={false}
           >
-            {objects.map((object) => (
+            {objects.map((object, key) => (
               <CarouselObjectToDisplay
+                key={key}
                 title={object.title}
                 image={object.image}
               />

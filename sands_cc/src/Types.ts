@@ -2,6 +2,8 @@ export type Race = {
   name: string;
   type: string;
   description: string;
+  appearance: string;
+  characteristics?: string;
   benefits: [
     {
       title: string;
@@ -12,8 +14,10 @@ export type Race = {
     {
       title: string;
       cpCost: number;
+      requirements?: string;
       energyCost: number;
       actionCost: string;
+      duration?: string;
       description: string;
     }
   ];

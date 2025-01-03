@@ -40,7 +40,10 @@ export function TabbedBox(props: TabbedBoxProps) {
             <TabPanel
               key={index}
               value={tab.title}
-              sx={{ backgroundColor: 'secondary.main', padding: '1vw' }}
+              sx={{
+                backgroundColor: 'secondary.main',
+                padding: '1vw'
+              }}
             >
               {tab.content}
             </TabPanel>
